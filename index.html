@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Your reverser number is here <p id="num"></p>
+    </div>
+    <script>
+        let num = prompt("Enter Your Number you want Reverse")
+        function reverseNumber(num) {
+  let reversed = 0;
+
+  while (num !== 0) {
+    reversed = (reversed * 10) + (num % 10);
+     num = Math.trunc(num / 10);
+  }
+
+  return reversed;
+}
+console.log(reverseNumber(num))
+document.getElementById('num').innerHTML  = reverseNumber(num);
+// console.log(reverseNumber(12345)); // Output: 54321
+// console.log(reverseNumber(-123)); // Output: -321
+// console.log(reverseNumber(120)); // Output: 21
+          
+
+
+
+
+
+    </script>
+</body>
+</html>
